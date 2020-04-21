@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>JSON数据查询</title>
+    <script src="../JS/jQuery/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script>type="text/javascript">
+    $(function () {
+
+        $.get("QueryJson.ashx", function (data, status) {
+
+        });
+
+        $("#selclassname").change(function () {
+            $("#showinfo").empty();
+            var ClassId = $(this).val();
+            if (ClassId == "0") return;
+
+            $.ajax({
+                type: "post",
+                url: "QueryJson.ashx",
+                data:{"ClassId":ClassId},
+                success: function (data,status) {
+                    //alert(data);
+                    var stus = $.parseJSON(data);
+                    //alert(stus);
+                    for (var i = 0; i < stus.length; i++) {
+                        var li = "<li>" + stus[i].StudentId + "&nbsp;" + stus[i].StudentName +
+                            "&nbsp;" + stus[i].Gender + "&nbsp;" + stus[i].StudentAddress  + "</li>";
+                        $("#showinfo").append(li);
+                    }
+                }
+            })
+            
+        });
+    })
+    </script>
+</head>
+<body>
+    <select id="selclassname">
+        <option value="0">--请选择--</option>
+        <option value="1">软件1班</option>
+        <option value="2">软件2班</option>
+        <option value="3">计算机3班</option>
+        <option value="4">计算机4班</option>
+    </select>
+
+    <ul id="showinfo"></ul>
+</body>
+</html>

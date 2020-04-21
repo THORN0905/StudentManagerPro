@@ -1,0 +1,43 @@
+﻿A
+{
+	color: Blue;
+}
+#QueryDiv
+{
+	width: 940px;
+	height: 40px;
+	margin-top: 10px;
+	float: left;
+	font-size: 14px;
+	line-height: 40px;
+	padding-left: 10px;
+}
+.stuInfo
+{
+	width: 468px;
+	height: 160px;
+	border: 1px solid #D4D0C8;
+	float: left;
+	margin-top: 10px;
+	font-size: 14px;
+}
+.stuImg
+{
+	width: 150px;
+	height: 136px;
+	background-color: Gray;
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	display: inline;
+}
+.stuItem
+{
+	width: 280px;
+	height: 30px;
+	line-height: 30px; /*内容垂直居中*/
+	float: left;
+	margin-top: 8px;
+	margin-left: 15px;
+	display: inline;
+}

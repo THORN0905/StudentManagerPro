@@ -1,0 +1,22 @@
+﻿
+#container
+{
+	width: 950px;
+	text-align: center;
+}
+#StudentDetail
+{
+	width: 400px;
+	margin: 0px auto 0px auto;
+	margin-top: 10px;
+	font-size: 14px;
+	text-align: left;
+}
+.StuTable
+{
+	width: 400px;
+}
+.StuTable td
+{
+	padding: 5px;
+}

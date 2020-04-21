@@ -1,0 +1,53 @@
+﻿body
+{
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+#container
+{
+	width: 950px;
+	margin: 100px auto 0px auto;
+	text-align: left;
+	height: 700px;
+}
+#sysTitle
+{
+	width: 950px;
+	color: Blue;
+	font-family: 微软雅黑;
+	font-size: 30px;
+	float: left;
+	margin-bottom: 20px;
+}
+#loginImg
+{
+	width: 450px;
+	margin-right: 10px;
+	float: left;
+}
+#loginImg img
+{
+	width: 450px;
+}
+#loginInput
+{
+	width: 450px;
+	height: 240px;
+	font-size:14px;
+	float: left;
+	border: 1px solid #D4D0C8;
+	padding-top:25px;
+}
+.loginItem
+{
+	width: 320px;
+	float: left;
+	text-align:right ;
+	margin-top: 40px;
+}
+.loginItemText
+{
+	border:1px solid #BCC6D7;
+}

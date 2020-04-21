@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainPage.master.cs" Inherits="StudentManagerPro.MainPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Styles/MainPage.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!--网站导航条-->
+    <div id="container">
+        <div id="navBar">
+            <asp:Image ID="Image1" ImageUrl="~/Images/navBar.png" BorderStyle="None" runat="server"
+                usemap="#Map" />
+            <map name="Map" id="Map">
+                <area shape="rect" coords="10,5,144,30" href="../Default.aspx" />
+                <area shape="rect" coords="168,7,258,27" href="../Student/AddStudent.aspx" />
+                <area shape="rect" coords="273,6,369,27" href="../Student/StudentManage.aspx" />
+                <area shape="rect" coords="382,6,475,28" href="../Score/ScoreManage.aspx" />
+                <area shape="rect" coords="490,6,581,30" target="_blank" href="../SysAdmin/ChangePwd.aspx" />
+                <area shape="rect" coords="596,6,691,29" href="../ExitSys.aspx" onclick="return confirm('是否确认退出？')" />
+            </map>
+        </div>
+        <!--网站顶部部分-->
+        <div id="topBar">
+            <!--网站地图-->
+            <div id="webMapDiv">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+            </div>
+            <!--显示登录用户-->
+            <div id="showUserDiv">
+                <asp:Literal ID="ltaUserName" runat="server"></asp:Literal>
+            </div>
+        </div>
+        <!--[if !IE]>内容页DIV<![endif]-->
+        <div id="pageContent">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!--[if !IE]>网站脚注部分<![endif]-->
+        <div id="footBar">
+        </div>
+        <div id="bottomBar">
+            本系统版权所有：&nbsp;喜科堂互联教育&nbsp;&nbsp;课程官网：xiketang.com
+        </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿#sysName
+{
+	width: 950px;
+	float: left;
+	color: Blue;
+	font-size: 40px;
+	font-family: 方正姚体;
+	margin-top: 30px;
+	text-align: center;
+}
+#sysImage
+{
+	width: 950px;
+	float: left;
+	margin-top: 50px;
+	margin-bottom:100px;
+}
+#sysImage img
+{
+	width: 950px;
+}

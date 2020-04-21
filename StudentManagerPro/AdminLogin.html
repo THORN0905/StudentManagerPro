@@ -1,0 +1,90 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>管理员登录 </title>
+    <link href="Styles/AdminLogin.css" rel="stylesheet" type="text/css" />
+    <script src="JS/jQuery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btnlogin").click(function () {
+                var username = $("#username").val().trim();
+                var password = $("#password").val().trim();
+                if (username.length == 0 || password.length == 0) {
+                    $("#logininfo").html("请填写完整用户名或密码");
+                    $("#logininfo").show();
+                    return;
+                }
+                $("#logininfo").hide();
+                $("#loginloading").show();
+                //post方法
+                //$.post(
+                //    "Handler/AdminLogin.ashx",
+                //    {"username":username,"password":password},
+                //    function (data, status) {
+                //        if (status = "success") {
+                //            if (data == 1) {
+                //                location = "Default.aspx";
+                //            } else if (data == 0) {
+                //                $("#loginloading").hide();
+                //                alert("用户名或密码错误！");
+                //            } else {
+                //                alert(data);
+                //            }
+                //        } else {
+                //            $("#loginloading").hide();
+                //            alert("ajax提交失败");
+                //        }
+                //    }
+                //    )
+                $.ajax({
+                    type: "post",
+                    url: "Handler/AdminLogin.ashx",
+                    data: {"username": username, "password": password },
+                    error: function () {
+                        alert("提交失败");
+                    },
+                    success: function (data,status) {
+                        if (data == 1) {
+                            location = "Default.aspx";
+                        } else if (data == 0) {
+                            $("#loginloading").hide();
+                            alert("用户名或密码错误！");
+                        } else {
+                            alert(data);
+                        }
+                    }
+                });
+            });
+            
+
+        });
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <div id="container">
+            <div id="sysTitle">
+                学员管理系统
+            </div>
+            <div id="loginImg">
+                <img src="Images/login.png" alt="" />
+            </div>
+            <div id="loginInput">
+                <div id="logininfo" style="height: 10px; margin-left: 100px; color: red; font-size: 18px; display: none; ">账号或密码错误，请重试！</div>
+                
+                <div class="loginItem">
+                    用户名：<input type="text" id="username"/>
+                </div>
+                <div class="loginItem">
+                    密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" id="password" />
+                </div>
+                <div class="loginItem">
+                    <div id="loginloading" style=" width:150px;height:30px;display:none; text-align:left;">
+                        <img src="Images/loading.gif"style="width: 32px; height: 32px;margin-right:20px;"/> <span style="position:relative;bottom:8px;">登录中...</span></div>
+                    <img src="Images/btnLogin.png" id="btnlogin"/>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

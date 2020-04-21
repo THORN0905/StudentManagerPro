@@ -1,0 +1,52 @@
+﻿#QueryDiv
+{
+	width: 940px;
+	height: 40px;
+	margin-top: 10px;
+	float: left;
+	font-size: 14px;
+	line-height: 40px;
+	padding-left: 10px;	
+}
+#ScoreListDiv
+{
+	width: 940px;
+	padding-left:10px;
+	font-size:14px;
+	float: left;
+}
+
+.ScoreTable
+ {
+	border:1px solid #0058A3;/*表格边框*/
+        border-collapse:collapse;/*边框重叠*/		
+ }
+ .ScoreTable caption
+ {
+	border:1px solid #0058A3;/*标题边框*/
+	padding:5px;             /*标题间距*/
+	background-color:#F0F7FF;/*背景色*/
+	font-family:黑体;        /*字体*/
+        font-size:16px;          /*字号*/
+	letter-spacing:5px;      /*字间距*/
+ }
+ .ScoreTable th
+ {
+	border:1px solid #0058A3;
+	padding:5px;
+	text-align:center;
+        background-color:#D2E8FF;
+	font-size:14px;
+ }
+ .ScoreTable td
+ {
+	border:1px solid #0058A3;
+	padding:5px;
+	text-align:center;
+	font-size:12px;	
+ }
+ /*隔行变色*/
+ .ScoreTable tr.altrow 
+ {
+	background-color:#C7E5FF;
+ }

@@ -1,0 +1,65 @@
+﻿body
+{
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+#container
+{
+	width: 950px;
+	margin: 0px auto 0px auto;
+	text-align: left;
+	overflow: auto;
+}
+#navBar
+{
+	width: 950px;
+	margin-top: 5px;
+	float: left;
+}
+#topBar
+{
+	width: 950px;
+	height: 35px;
+	background-color: #99CCFF;
+	float: left;
+	margin-top: 5px;
+}
+#webMapDiv
+{
+	width: 500px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	font-size:14px;
+}
+#showUserDiv
+{
+	width: 150px;
+	float: right;
+	margin-top: 10px;
+	font-size: 14px;
+}
+#pageContent
+{
+	width: 950px;
+	overflow: auto; /*内容div高度自适应*/
+	float: left;
+}
+#footBar
+{
+	width: 950px;
+	height: 35px;
+	background-color: #99CCFF;
+	margin-top: 20px;
+	float: left;	
+}
+#bottomBar
+{
+	width: 950px;
+	text-align: center;	
+	margin-top: 8px;
+	font-size:14px;
+	float: left;	
+}
